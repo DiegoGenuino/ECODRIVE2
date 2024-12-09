@@ -20,7 +20,7 @@ body {
 
 /* Estilo para seleção de texto */
 ::selection {
-    background-color: #72c8ff;
+    background-color: #72c9ff50;
     color: #fff;
 }
 
@@ -44,8 +44,6 @@ header nav a {
     margin: 0 1rem;
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.3s ease;
-
     background: linear-gradient(116.825deg, #2b2e4a 41%, #00fffb 100%);
     background-size: 400% 400%;
     background-clip: text;
@@ -54,7 +52,7 @@ header nav a {
 }
 
 header nav a:hover {
-    color: #07014F;
+    color: #ffffff;
 }
 
 .hero {
@@ -121,9 +119,13 @@ header nav a:hover {
 .hero .mockup img {
     max-width: 60%;
     border-radius: 40px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    box-shadow: 0 4px 51px 10px #07014F ;
+    box-shadow: 0 4px 51px 10px #07014F;
+    transition: box-shadow .3s ease;
 }
+
+.hero .mockup img:hover {
+    box-shadow: 0 4px 80px 10px #07014F;
+} 
 
 /* Serviços */
 .aba-servicos {
@@ -171,12 +173,15 @@ header nav a:hover {
     text-align: center;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+    box-shadow: 0 4px 30px 10px #07014F;
+    transition: box-shadow .3s ease;
 }
 
 .card:nth-child(1){
     border-top-left-radius: 45px;
     border-bottom-right-radius: 45px;
 }
+
 
 .card:nth-child(2){
     border-radius: 10px;
@@ -189,6 +194,7 @@ header nav a:hover {
 
 .card:hover {
     transform: translateY(-10px);
+    box-shadow: 0 4px 70px 10px #07014F;
 }
 
 .card i {
