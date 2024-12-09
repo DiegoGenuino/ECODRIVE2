@@ -1,0 +1,261 @@
+/* Importando a fonte Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* Estilos Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    background: black;
+    color: #333;
+}
+
+/* Estilo para seleção de texto */
+::selection {
+    background-color: #72c8ff;
+    color: #fff;
+}
+
+/* Cabeçalho */
+header {
+    background: rgba(65, 65, 65, 0.296);
+    /* Cor com transparência */
+    backdrop-filter: blur(10px);
+    /* Aplicando o desfoque */
+    -webkit-backdrop-filter: blur(10px);
+    /* Compatibilidade com navegadores WebKit */
+    padding: 1rem;
+    text-align: center;
+    border-radius: 8px;
+    /* Borda arredondada para efeito visual agradável */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Sombra para destacar o header */
+}
+
+header nav a {
+    margin: 0 1rem;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+
+    background: linear-gradient(116.825deg, #2b2e4a 41%, #00fffb 100%);
+    background-size: 400% 400%;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: aurora-text 6s infinite;
+}
+
+header nav a:hover {
+    color: #07014F;
+}
+
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    background: black
+}
+
+.hero .content {
+    max-width: 600px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero .eco-drive-text {
+    color: #00ffee;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    color: #2b2e4a;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: #555;
+    text-align: left;
+}
+
+.hero h1,
+.hero p {
+    background: linear-gradient(116.825deg, #00a2ff88 41%, #46F600, #0C7271 100%);
+    background-size: 400% 400%;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: aurora-text 6s infinite;
+}
+
+.hero .btn {
+    color: black;
+    background: linear-gradient(116.825deg, #00a2ff88 41%, #46F600, #0C7271 100%);
+    background-size: 400% 400%;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s ease;
+    width: 10rem;
+    animation: aurora-text 6s infinite;
+}
+
+.hero .btn:hover {
+    color: #fff;
+}
+
+.hero .mockup img {
+    max-width: 60%;
+    border-radius: 40px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 51px 10px #07014F ;
+}
+
+/* Serviços */
+.aba-servicos {
+    border-top: .1rem solid #07014F;
+    text-align: center;
+    padding: 3rem 1rem;
+    background: #000000;
+}
+
+
+.aba-servicos h2 {
+    font-size: 2rem;
+
+    background: linear-gradient(116.825deg, #00a2ff88 41%, #46F600, #0C7271 100%);
+    background-size: 400% 400%;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: aurora-text 6s infinite;
+}
+
+.aba-servicos p {
+    font-size: 1rem;
+    margin-top: 1rem;
+
+    background: linear-gradient(116.825deg, #00a2ff88 41%, #46F600, #0C7271 100%);
+    background-size: 400% 400%;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: aurora-text 6s infinite;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.card {
+    width: 300px;
+    background: #07014F ;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:nth-child(1){
+    border-top-left-radius: 45px;
+    border-bottom-right-radius: 45px;
+}
+
+.card:nth-child(2){
+    border-radius: 10px;
+}
+
+.card:nth-child(3){
+    border-top-right-radius: 45px;
+    border-bottom-left-radius: 45px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card i {
+    font-size: 2rem;
+    color: #ffffff ;
+    margin-bottom: 1rem;
+}
+
+.card h3 {
+    font-size: 1.2rem;
+    color: #2b2e4a;
+    margin-bottom: 0.5rem;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+h4 {
+    text-align: center;
+    margin-bottom: .1rem;
+}
+
+@keyframes aurora-text {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero .content {
+        display: block;
+    }
+
+    .hero h1 {
+        text-align: center;
+    }
+
+    .hero p {
+        text-align: center;
+    }
+
+    .hero .btn {
+        margin: auto;
+    }
+
+    .hero .mockup img {
+        max-width: 70%;
+    }
+}
