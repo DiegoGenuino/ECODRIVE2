@@ -9,6 +9,12 @@
     font-family: "Poppins", sans-serif;
 }
 
+:root {
+    --main-bg-gradient: linear-gradient(116.825deg, #766cff88 5%, #7137dd 50%, #0cd3d0 100%);
+    --secondary-bg-gradient: linear-gradient(116.825deg, #766cff88 41%, #7137dd, #6c64d8 100%);
+    --text-bg: #fff;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -44,7 +50,7 @@ header nav a {
     margin: 0 1rem;
     text-decoration: none;
     font-weight: 500;
-    background: linear-gradient(116.825deg, #2b2e4a 41%, #00fffb 100%);
+    background: var(--main-bg-gradient);
     background-size: 400% 400%;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -92,28 +98,37 @@ header nav a:hover {
 
 .hero h1,
 .hero p {
-    background: linear-gradient(116.825deg, #00a2ff88 41%, #46F600, #0C7271 100%);
+    background: var(--main-bg-gradient);
     background-size: 400% 400%;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: aurora-text 6s infinite;
 }
 
+
 .hero .btn {
-    color: black;
-    background: linear-gradient(116.825deg, #00a2ff88 41%, #46F600, #0C7271 100%);
+    color: rgb(255, 255, 255);
+    background: var(--main-bg-gradient);
     background-size: 400% 400%;
     padding: 0.8rem 1.5rem;
     border-radius: 8px;
     text-decoration: none;
     font-weight: 600;
-    transition: background 0.3s ease;
+    transition: color .3s ease, scale .1s ease-in-out;
     width: 10rem;
     animation: aurora-text 6s infinite;
+    display: block;
+    box-shadow: 0 0 30px 5px #7a71e6;
+    border: none;
+}
+
+.hero .btn a {
+    filter: brightness(50%);
 }
 
 .hero .btn:hover {
-    color: #fff;
+    scale: 1.2;
+    box-shadow: 0 0 50px 5px #7a71e6;
 }
 
 .hero .mockup img {
@@ -139,7 +154,7 @@ header nav a:hover {
 .aba-servicos h2 {
     font-size: 2rem;
 
-    background: linear-gradient(116.825deg, #00a2ff88 41%, #46F600, #0C7271 100%);
+    background: var(--main-bg-gradient);
     background-size: 400% 400%;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -149,8 +164,7 @@ header nav a:hover {
 .aba-servicos p {
     font-size: 1rem;
     margin-top: 1rem;
-
-    background: linear-gradient(116.825deg, #00a2ff88 41%, #46F600, #0C7271 100%);
+    background: var(--text-bg);
     background-size: 400% 400%;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -167,34 +181,32 @@ header nav a:hover {
 
 .card {
     width: 300px;
-    background: #07014F ;
+    background: var(--secondary-bg-gradient);
     padding: 1.5rem;
     border-radius: 10px;
     text-align: center;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    box-shadow: 0 4px 30px 10px #07014F;
-    transition: box-shadow .3s ease;
+    box-shadow: 0 4px 30px 10px #08014f;
+    transition: box-shadow .3s ease, transform .3s ease-in-out;
 }
 
 .card:nth-child(1){
-    border-top-left-radius: 45px;
-    border-bottom-right-radius: 45px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
 
 .card:nth-child(2){
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 .card:nth-child(3){
-    border-top-right-radius: 45px;
-    border-bottom-left-radius: 45px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
 }
 
 .card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 4px 70px 10px #07014F;
+    box-shadow: 0 4px 70px 30px #07014F;
 }
 
 .card i {
@@ -205,13 +217,11 @@ header nav a:hover {
 
 .card h3 {
     font-size: 1.2rem;
-    color: #2b2e4a;
     margin-bottom: 0.5rem;
 }
 
 .card p {
     font-size: 1rem;
-    color: #555;
 }
 
 h4 {
